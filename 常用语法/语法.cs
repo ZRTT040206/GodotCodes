@@ -16,6 +16,19 @@ public partial class 语法 : Node
     !    ref 类型 变量   out 类型 变量    用于在函数内部接收变量引用
     !    ref 变量        out 变量         用于调用函数时传递引用
     */
+//*
+    //todo 2.Vecotr2I
+    //二维向量包含两个数，类似C++中的pair
+    //! Vector2I 向量名称 = new Vector2I(x,y);//不加(x,y)默认不给向量赋初值 初值为0？
+    //! 向量名称.X 向量名称.Y 可以调用x或y的值或者给xy赋值
+    // 可以用Vector2I创建数组
 
 
+
+    //todo foreach
+    /*
+    !   foreach (var item in collection) 通过item变量接收Collection的数据从而对collection进行遍历
+    
+    */
+     
 }
