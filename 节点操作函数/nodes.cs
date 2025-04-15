@@ -26,7 +26,7 @@ public void add(){
     //! 节点类型 节点名称 = 自定义的场景名.Instantiate<节点类型>()'
     Button button = scene.Instantiate<Button>();
     //此时此节点button可以当作子节点等添加到场景树中
-
+    //即为 
 //* 
 
     //todo 4.获取当前树上的节点
@@ -49,6 +49,6 @@ public void add(){
 //*
 
     //todo 直接将场景转化为节点
-    //! GetTree().ChangeSceneToFile("res://xxx") 首先获取当前场景的根节点，然后全部转化为某个节点
+    //! GetTree().ChangeSceneToFile("res://xxx") 首先获取当前场景的根节点，然后转化为某个节点
 }
 }

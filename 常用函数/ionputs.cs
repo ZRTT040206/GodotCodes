@@ -28,6 +28,22 @@ public partial class ionputs : Node
      */
 
     //todo 2.碰撞检测
-    
+     /* 
+        两个都包含Area2D节点(并且添加CollisionShape2D)的区域重叠都会产生信号 两个信号分别是 
+       
+        ! area_enter(area:Area2D) 进入被碰撞对象区域时触发
+        ! area_exited(area:Area2D) 离开被碰撞区域时触发
+
+        在对应节点内部创建函数，连接对应信号，加入 Area2D 参数，此时这个节点与其他节点(同样包含Area节点)碰撞时会发出以上两个信号
+            ? 接收的 area:Area2D函数是被碰撞节点的Area节点的实例，可以用GetPartent<父节点类型>获取被碰撞节点的父节点  
+    */ 
+     public void peng(Area2D areas)
+    {
+        GD.Print(111);
+        Sprite2D sb = areas.GetParent<Sprite2D>();
+        sb.Position = new Vector2(100,100);
+        //area节点可通过.Call()内部函数调用 
+        // ?估计是因为属于动态调用，并没有完整的被碰撞函数的实例，故需要用.Call()进行调用
+    }
 
 }

@@ -37,7 +37,21 @@ public partial class project : Node{
     {
         base._Input(@event);//处理输入事件的函数
         //@event可以转为键盘输入、鼠标输入或者手柄输入等
-
+        //可用Vector2I接收鼠标位置
+        //! @event as InputEventKey 键盘事件名称  as为转化
+        //! @event as InputEventMouseButton 鼠标事件名称  
+        //! @event as IsInputEventJoypadButton 手柄事件名称
+        /*
+            鼠标事件名称.Left\Right\Middle\WheelUp\WheelDowm
+            鼠标事件名称.Position(); 返回鼠标位置，返回值为Vector2I
+            if (@event is InputEventMouseButton mouseEvent && 
+            mouseEvent.ButtonIndex == MouseButton.Left &&!mouseEvent.Pressed)
+            {                           可以判断鼠标放开时的信号，没有取反符号是判断鼠标按下的信号
+                GD.Print("左键释放");
+            }
+          
+        */
+        //如果只是判断键盘可以用Input函数
     }
 
 }
