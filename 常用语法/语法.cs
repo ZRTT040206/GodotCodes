@@ -24,11 +24,21 @@ public partial class 语法 : Node
     // 可以用Vector2I创建数组
 
 
+//*
 
     //todo foreach
     /*
     !   foreach (var item in collection) 通过item变量接收Collection的数据从而对collection进行遍历
     
     */
-     
+//*
+    //todo => 
+    //! =>符号常用于匿名函数     
+    
+
+
+
+
+
+
 }

@@ -7,6 +7,7 @@ public partial class nodes : Node
     //! 节点类型  节点名称   = new 节点名称(); 
     Node2D node = new Node2D();
     //或者也可以直接在图形化界面中添加节点
+    //节点的常用操作可以看godot右侧检查器，包括节点位置移动等等
 
 //*
 public void add(){
@@ -32,9 +33,10 @@ public void add(){
     //todo 4.获取当前树上的节点
     //! 节点类型 节点名称 = GetNode<节点类型>("节点地址/节点名称");//获取某个节点
     Button nodess = GetNode<Button>("/root/main/button");//root是最大的根节点不加/root默认从/root开始
-    nodess.AddChild(Button);//* 添加场景先将场景实例化，再进行处理
+    nodess.AddChild(nodess);//* 添加场景先将场景实例化，再进行处理
     //! 节点类型 节点名称 = GetTree(); 获取整棵节点树（根节点）
-    Button but = GetTree().CurrentScene.AddChild();//* 通过场景树添加子节点，也可以使用GetNode添加子节点
+    Button but =new Button();
+    this.GetTree().CurrentScene.AddChild(but);//* 通过场景树添加子节点，也可以使用GetNode添加子节点
     //* CurrentScene用于将场景树转化为场景节点
     //GetTree()返回一个场景树，类型是SceneTree,
 

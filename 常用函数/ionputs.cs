@@ -43,7 +43,8 @@ public partial class ionputs : Node
         Sprite2D sb = areas.GetParent<Sprite2D>();
         sb.Position = new Vector2(100,100);
         //area节点可通过.Call()内部函数调用 
-        // ?估计是因为属于动态调用，并没有完整的被碰撞函数的实例，故需要用.Call()进行调用
+        // ?估计是因为没有完整的被碰撞函数的实例，故需要用.Call()进行调用
+
     }
 
 }
